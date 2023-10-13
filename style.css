@@ -7,7 +7,8 @@
 main {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgb(248, 105, 105), rgb(102, 102, 156), rgb(113, 62, 56));
+    /* background: linear-gradient(rgb(248, 105, 105), rgb(102, 102, 156), rgb(113, 62, 56)); */
+    background: var(--lin-g);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,45 +19,52 @@ main {
     width: 500px;
     padding: 15px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.09); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 30px var(--bl);
     backdrop-filter: blur(3.2px);
     -webkit-backdrop-filter: blur(3.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.theme i{
+::placeholder {
+    color: var(--tp);
+  }
+
+.theme i {
     position: absolute;
     right: 15px;
     font-size: large;
-    color:rgba(285, 285, 285, 0.8);
+    color: rgba(285, 285, 285, 0.8);
+    cursor: pointer;
+    color: var(--tp);
 }
 
 
-#item{
+#item {
     width: 100%;
     outline: 0;
     border: 0;
     border-radius: 3px;
     height: 30px;
-    background: rgba(255, 255, 255, 0.09); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 30px var(--bl);
     backdrop-filter: blur(3.2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px;
     font-weight: bold;
     display: block;
     margin-top: 30px;
+    color: var(--wh);
 }
 
-#todo{
+#todo {
     list-style: none;
     margin-top: 20px;
 }
 
-#todo li{
-    color: white;
-    background-color: rgb(85, 72, 72);
+#todo li {
+    color: var(--wh);
+    background-color: var(--bl);
     padding: 10px;
     border-radius: 4px;
     position: relative;
@@ -64,24 +72,26 @@ main {
     text-align: justify;
     margin: 10px;
     user-select: none;
+    color: var(--wh);
 }
 
-#todo li i{
-    position: absolute;   
+#todo li i {
+    position: absolute;
     right: 10px;
     top: 10px;
 }
 
-.done{
+.done {
     text-decoration: line-through;
-    color: rgb(255, 255, 255) !important;
-    background-color:  rgb(196, 196, 196) !important;
+    color: var(--bl) !important;
+    background-color: var(--wh) !important;
+
 }
 
-@media(max-width:650px){
+@media(max-width:650px) {
     .box {
         margin: 5vw;
         height: 85vh;
     }
-    
+
 }
