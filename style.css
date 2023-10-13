@@ -53,11 +53,18 @@ main {
     position: relative;
     padding-right: 25px;
     text-align: justify;
-
+    margin: 10px;
+    user-select: none;
 }
 
 #todo li i{
     position: absolute;   
     right: 10px;
     top: 10px;
+}
+
+.done{
+    text-decoration: line-through;
+    color: rgb(255, 255, 255) !important;
+    background-color:  rgb(196, 196, 196) !important;
 }

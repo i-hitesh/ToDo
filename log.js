@@ -5,8 +5,32 @@ item.addEventListener(
     "keyup",
     function (event) {
         if (event.key === "Enter") {
-            console.log(this.value);
+            addTodo(this.value);
             this.value = "";
         };
     }
 )
+
+const addTodo = (item) =>{
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+        ${item}
+        <i class="ri-close-fill"></i>
+    `;
+
+    listItem.addEventListener(
+        "click",
+        function (){
+            this.classList.toggle("done");
+        }
+    )
+
+    listItem.querySelector("i").addEventListener(
+        "click",
+        function(){
+            listItem.remove();
+        }
+    )
+
+    toDoBox.appendChild(listItem);
+}
