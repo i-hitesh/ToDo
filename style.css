@@ -25,6 +25,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.theme i{
+    position: absolute;
+    right: 15px;
+    font-size: large;
+    color:rgba(285, 285, 285, 0.8);
+}
+
+
 #item{
     width: 100%;
     outline: 0;
@@ -38,6 +46,7 @@ main {
     padding: 10px;
     font-weight: bold;
     display: block;
+    margin-top: 30px;
 }
 
 #todo{
@@ -67,4 +76,12 @@ main {
     text-decoration: line-through;
     color: rgb(255, 255, 255) !important;
     background-color:  rgb(196, 196, 196) !important;
+}
+
+@media(max-width:650px){
+    .box {
+        margin: 5vw;
+        height: 85vh;
+    }
+    
 }
